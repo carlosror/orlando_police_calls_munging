@@ -316,8 +316,8 @@ police_calls &lt;- read_csv(&quot;Calls_For_Service_2009_-_2015.csv&quot;)
 read_time &lt;- Sys.time() - start
 cat(&quot;It took&quot;, as.numeric(read_time, units = &quot;secs&quot;), &quot;seconds to read the file.&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayA4MS45MTYyOCBzZWNvbmRzIHRvIHJlYWQgdGhlIGZpbGUuXG4ifQ== -->
-<pre><code>It took 81.91628 seconds to read the file.</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayA0Ni45MTg1MyBzZWNvbmRzIHRvIHJlYWQgdGhlIGZpbGUuXG4ifQ== -->
+<pre><code>It took 46.91853 seconds to read the file.</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -373,8 +373,8 @@ names(police_calls)[names(police_calls) == 'Incident Disposition'] &lt;- 'Incide
 rename_time &lt;- Sys.time() - start
 cat(&quot;It took&quot;, rename_time, &quot;seconds to rename the columns.&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayAxOS43MzAzMiBzZWNvbmRzIHRvIHJlbmFtZSB0aGUgY29sdW1ucy5cbiJ9 -->
-<pre><code>It took 19.73032 seconds to rename the columns.</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayAxMC40MDM5NSBzZWNvbmRzIHRvIHJlbmFtZSB0aGUgY29sdW1ucy5cbiJ9 -->
+<pre><code>It took 10.40395 seconds to rename the columns.</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -396,8 +396,8 @@ police_calls$days &lt;- weekdays(police_calls_dates) # vector of &quot;Wednesday
 weekdays_time &lt;- Sys.time() - start
 cat(&quot;It took&quot;, weekdays_time, &quot;seconds to compute the weekdays from the dates.&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayAxLjM5MDI5NCBzZWNvbmRzIHRvIGNvbXB1dGUgdGhlIHdlZWtkYXlzIGZyb20gdGhlIGRhdGVzLlxuIn0= -->
-<pre><code>It took 1.390294 seconds to compute the weekdays from the dates.</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayA1MC42NDQ4MSBzZWNvbmRzIHRvIGNvbXB1dGUgdGhlIHdlZWtkYXlzIGZyb20gdGhlIGRhdGVzLlxuIn0= -->
+<pre><code>It took 50.64481 seconds to compute the weekdays from the dates.</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -418,8 +418,8 @@ police_calls_hours &lt;- hours(police_calls_times)
 hours_time &lt;- Sys.time() - start
 cat(&quot;It took&quot;, as.numeric(hours_time, units = &quot;mins&quot;), &quot;minutes to compute the hours from the times.&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayAxLjY3MDQxMSBtaW51dGVzIHRvIGNvbXB1dGUgdGhlIGhvdXJzIGZyb20gdGhlIHRpbWVzLlxuIn0= -->
-<pre><code>It took 1.670411 minutes to compute the hours from the times.</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayAxLjA0NjgzMiBtaW51dGVzIHRvIGNvbXB1dGUgdGhlIGhvdXJzIGZyb20gdGhlIHRpbWVzLlxuIn0= -->
+<pre><code>It took 1.046832 minutes to compute the hours from the times.</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -439,8 +439,8 @@ police_calls$periods &lt;- sapply(police_calls_hours, hours_to_periods)
 periods_time &lt;- Sys.time() - start
 cat(&quot;It took&quot;, as.numeric(periods_time, units = &quot;secs&quot;), &quot;seconds to compute the hours from the times.&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayAzOC40Mjg3NyBzZWNvbmRzIHRvIGNvbXB1dGUgdGhlIGhvdXJzIGZyb20gdGhlIHRpbWVzLlxuIn0= -->
-<pre><code>It took 38.42877 seconds to compute the hours from the times.</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayAxNy42NTY3OSBzZWNvbmRzIHRvIGNvbXB1dGUgdGhlIGhvdXJzIGZyb20gdGhlIHRpbWVzLlxuIn0= -->
+<pre><code>It took 17.65679 seconds to compute the hours from the times.</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -593,8 +593,8 @@ police_calls$categories &lt;- types[police_calls$Incident_Type]
 categories_time &lt;- Sys.time() - start
 cat(&quot;It took&quot;, as.numeric(categories_time, units = &quot;secs&quot;), &quot;seconds to put the incidents into super-categories bins.&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayA1LjEwNjc4MyBzZWNvbmRzIHRvIHB1dCB0aGUgaW5jaWRlbnRzIGludG8gc3VwZXItY2F0ZWdvcmllcyBiaW5zLlxuIn0= -->
-<pre><code>It took 5.106783 seconds to put the incidents into super-categories bins.</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayAxLjc4NzE5NCBzZWNvbmRzIHRvIHB1dCB0aGUgaW5jaWRlbnRzIGludG8gc3VwZXItY2F0ZWdvcmllcyBiaW5zLlxuIn0= -->
+<pre><code>It took 1.787194 seconds to put the incidents into super-categories bins.</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -636,8 +636,8 @@ police_calls$longitude &lt;- as.numeric(police_calls$longitude)
 latlong_time &lt;- Sys.time() - start
 cat(&quot;It took&quot;, as.numeric(latlong_time, units = &quot;secs&quot;), &quot;seconds to extract the latitudes and longitudes.&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayAzOS41OTY3OSBzZWNvbmRzIHRvIGV4dHJhY3QgdGhlIGxhdGl0dWRlcyBhbmQgbG9uZ2l0dWRlcy5cbiJ9 -->
-<pre><code>It took 39.59679 seconds to extract the latitudes and longitudes.</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayAyNC4yMzkxOCBzZWNvbmRzIHRvIGV4dHJhY3QgdGhlIGxhdGl0dWRlcyBhbmQgbG9uZ2l0dWRlcy5cbiJ9 -->
+<pre><code>It took 24.23918 seconds to extract the latitudes and longitudes.</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -740,7 +740,7 @@ unmapped_locations$longitude &lt;- as.numeric(unmapped_locations$longitude)</cod
 <p><br></p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RhcnQgPC0gU3lzLnRpbWUoKVxuIyBUaGlzIGlzIGRvaW5nIGEgTEVGVCBKT0lOXG4jIGh0dHBzOi8vd3d3Lnczc2Nob29scy5jb20vc3FsL3NxbF9qb2luX2xlZnQuYXNwXG5wb2xpY2VfY2FsbHNfbWVyZ2UgPC0gbWVyZ2UoeCA9IHBvbGljZV9jYWxscywgeSA9IHVubWFwcGVkX2xvY2F0aW9uc1ssIGMoXCJJbmNpZGVudF9Mb2NhdGlvblwiLCBcImxhdGl0dWRlXCIsIFwibG9uZ2l0dWRlXCIpXSwgYnkgPSBcIkluY2lkZW50X0xvY2F0aW9uXCIsIGFsbC54ID0gVFJVRSwgaW5jb21wYXJhYmxlcyA9IE5BKVxuIyBBZnRlciB3ZSBqb2luLCB3ZSBhcmUgbGVmdCBsYXRpdHVkZS54IGZyb20gcG9saWNlX2NhbGxzIGFuZCBsYXRpdHVkZS55IGZyb21cbiMgdW5tYXBwZWRfbG9jYXRpb25zLiBXZSB3YW50IGEgc2luZ2xlIGZpZWxkLCBsYXRpdHVkZSwgd2hpY2ggdGFrZXMgdGhlIHZhbHVlIFxuIyBsYXRpdHVkZS54IGlmIGxhdGl0dWRlLnggaXMgbm90IE5BOyBvdGhlcndpc2UgaXQgdGFrZXMgdGhlIHZhbHVlIGxhdGl0dWRlLnkuIFxuIyBodHRwczovL3N0YWNrb3ZlcmZsb3cuY29tL3F1ZXN0aW9ucy83NDg4MDY4L3Rlc3QtZm9yLW5hLWFuZC1zZWxlY3QtdmFsdWVzLWJhc2VkLW9uLXJlc3VsdFxuIyBJIHRoaW5rIHdlIGNhbiBhbHNvIGRvOlxuIyBwb2xpY2VfY2FsbHNfbWVyZ2UkbGF0aXR1ZGUgPC0gaWZlbHNlKCFpcy5uYShwb2xpY2VfY2FsbHNfbWVyZ2UkbGF0aXR1ZGUueCksIHBvbGljZV9jYWxsc19tZXJnZSRsYXRpdHVkZS54LCBwb2xpY2VfY2FsbHNfbWVyZ2UkbGF0aXR1ZGUueSlcbnBvbGljZV9jYWxsc19tZXJnZSA8LSB3aXRoaW4ocG9saWNlX2NhbGxzX21lcmdlLCBsYXRpdHVkZSA8LSBpZmVsc2UoIWlzLm5hKGxhdGl0dWRlLngpLCBsYXRpdHVkZS54LCBsYXRpdHVkZS55KSlcbiMgRG9pbmcgdGhlIHNhbWUgdGhpbmcgZm9yIHRoZSBsb25naXR1ZGVcbnBvbGljZV9jYWxsc19tZXJnZSA8LSB3aXRoaW4ocG9saWNlX2NhbGxzX21lcmdlLCBsb25naXR1ZGUgPC0gaWZlbHNlKCFpcy5uYShsb25naXR1ZGUueCksIGxvbmdpdHVkZS54LCBsb25naXR1ZGUueSkpXG4jIFJlbW92aW5nIGxhdGl0dWRlLngsIGxhdGl0dWRlLnksIGxvbmdpdHVkZS54LCBsb25naXR1ZGUueVxuIyBodHRwczovL3N0YWNrb3ZlcmZsb3cuY29tL3F1ZXN0aW9ucy80NjA1MjA2L2Ryb3AtZGF0YS1mcmFtZS1jb2x1bW5zLWJ5LW5hbWVcbnBvbGljZV9jYWxsc19tZXJnZSA8LSB3aXRoaW4ocG9saWNlX2NhbGxzX21lcmdlLCBybShsYXRpdHVkZS54LCBsYXRpdHVkZS55LCBsb25naXR1ZGUueCwgbG9uZ2l0dWRlLnkpKVxuIyBPcmRlcmluZyBieSBpbmNpZGVudCBudW1iZXIuIEkgZG9uJ3QgdGhpbmsgeW91IHJlYWxseSBuZWVkIHRvIGRvIHRoaXNcbnBvbGljZV9jYWxsc19tZXJnZSA8LSBwb2xpY2VfY2FsbHNfbWVyZ2Vbd2l0aChwb2xpY2VfY2FsbHNfbWVyZ2UsIG9yZGVyKEluY2lkZW50X051bWJlcikpLCBdXG4jIFJlb3JkZXJpbmcgY29sdW1ucywgbm90IG5lY2Vzc2FyeSwgZWl0aGVyLCBidXQgaXQgaXMgbmljZXIgdG8gaGF2ZSB0aGUgSW5jaWRlbnRfTnVtYmVyXG4jIEluY2lkZW50X0RhdGVfVGltZSBhcyB0aGUgZmlyc3QgMiBjb2x1bW5zXG5wb2xpY2VfY2FsbHNfbWVyZ2UgPC0gcG9saWNlX2NhbGxzX21lcmdlWywgYygyLDMsMSw0LDU6OSldXG5tZXJnZV90aW1lIDwtIFN5cy50aW1lKCkgLSBzdGFydFxuY2F0KFwiSXQgdG9va1wiLCBhcy5udW1lcmljKG1lcmdlX3RpbWUsIHVuaXRzID0gXCJzZWNzXCIpLCBcInNlY29uZHMgdG8gbWVyZ2UgdGhlIDIgZGF0YWZyYW1lcy5cIilcbmBgYCJ9 -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RhcnQgPC0gU3lzLnRpbWUoKVxuIyBUaGlzIGlzIGRvaW5nIGEgTEVGVCBKT0lOXG4jIGh0dHBzOi8vd3d3Lnczc2Nob29scy5jb20vc3FsL3NxbF9qb2luX2xlZnQuYXNwXG5wb2xpY2VfY2FsbHNfbWVyZ2UgPC0gbWVyZ2UoeCA9IHBvbGljZV9jYWxscywgeSA9IHVubWFwcGVkX2xvY2F0aW9uc1ssIGMoXCJJbmNpZGVudF9Mb2NhdGlvblwiLCBcImxhdGl0dWRlXCIsIFwibG9uZ2l0dWRlXCIpXSwgYnkgPSBcIkluY2lkZW50X0xvY2F0aW9uXCIsIGFsbC54ID0gVFJVRSwgaW5jb21wYXJhYmxlcyA9IE5BKVxuIyBBZnRlciB3ZSBqb2luLCB3ZSBhcmUgbGVmdCBsYXRpdHVkZS54IGZyb20gcG9saWNlX2NhbGxzIGFuZCBsYXRpdHVkZS55IGZyb21cbiMgdW5tYXBwZWRfbG9jYXRpb25zLiBXZSB3YW50IGEgc2luZ2xlIGZpZWxkLCBsYXRpdHVkZSwgd2hpY2ggdGFrZXMgdGhlIHZhbHVlIFxuIyBsYXRpdHVkZS54IGlmIGxhdGl0dWRlLnggaXMgbm90IE5BOyBvdGhlcndpc2UgaXQgdGFrZXMgdGhlIHZhbHVlIGxhdGl0dWRlLnkuIFxuIyBodHRwczovL3N0YWNrb3ZlcmZsb3cuY29tL3F1ZXN0aW9ucy83NDg4MDY4L3Rlc3QtZm9yLW5hLWFuZC1zZWxlY3QtdmFsdWVzLWJhc2VkLW9uLXJlc3VsdFxuIyBJIHRoaW5rIHdlIGNhbiBhbHNvIGRvOlxuIyBwb2xpY2VfY2FsbHNfbWVyZ2UkbGF0aXR1ZGUgPC0gaWZlbHNlKCFpcy5uYShwb2xpY2VfY2FsbHNfbWVyZ2UkbGF0aXR1ZGUueCksIHBvbGljZV9jYWxsc19tZXJnZSRsYXRpdHVkZS54LCBwb2xpY2VfY2FsbHNfbWVyZ2UkbGF0aXR1ZGUueSlcbnBvbGljZV9jYWxsc19tZXJnZSA8LSB3aXRoaW4ocG9saWNlX2NhbGxzX21lcmdlLCBsYXRpdHVkZSA8LSBpZmVsc2UoIWlzLm5hKGxhdGl0dWRlLngpLCBsYXRpdHVkZS54LCBsYXRpdHVkZS55KSlcbiMgRG9pbmcgdGhlIHNhbWUgdGhpbmcgZm9yIHRoZSBsb25naXR1ZGVcbnBvbGljZV9jYWxsc19tZXJnZSA8LSB3aXRoaW4ocG9saWNlX2NhbGxzX21lcmdlLCBsb25naXR1ZGUgPC0gaWZlbHNlKCFpcy5uYShsb25naXR1ZGUueCksIGxvbmdpdHVkZS54LCBsb25naXR1ZGUueSkpXG4jIFJlbW92aW5nIGxhdGl0dWRlLngsIGxhdGl0dWRlLnksIGxvbmdpdHVkZS54LCBsb25naXR1ZGUueVxuIyBodHRwczovL3N0YWNrb3ZlcmZsb3cuY29tL3F1ZXN0aW9ucy80NjA1MjA2L2Ryb3AtZGF0YS1mcmFtZS1jb2x1bW5zLWJ5LW5hbWVcbnBvbGljZV9jYWxsc19tZXJnZSA8LSB3aXRoaW4ocG9saWNlX2NhbGxzX21lcmdlLCBybShsYXRpdHVkZS54LCBsYXRpdHVkZS55LCBsb25naXR1ZGUueCwgbG9uZ2l0dWRlLnkpKVxuIyBPcmRlcmluZyBieSBpbmNpZGVudCBudW1iZXIuIEkgZG9uJ3QgdGhpbmsgeW91IHJlYWxseSBuZWVkIHRvIGRvIHRoaXMsIGJ1dCBpdCBsb29rc1xuIyBuaWNlciB0byBoYXZlIHRoZSBkYXRhZnJhbWUgb3JkZXJlZCBieSB0aGUgaW5jaWRlbnQgbnVtYmVyXG4jIGh0dHBzOi8vc3RhY2tvdmVyZmxvdy5jb20vcXVlc3Rpb25zLzEyOTY2NDYvaG93LXRvLXNvcnQtYS1kYXRhZnJhbWUtYnktY29sdW1uc1xucG9saWNlX2NhbGxzX21lcmdlIDwtIHBvbGljZV9jYWxsc19tZXJnZVt3aXRoKHBvbGljZV9jYWxsc19tZXJnZSwgb3JkZXIoSW5jaWRlbnRfTnVtYmVyKSksIF1cbiMgUmVvcmRlcmluZyBjb2x1bW5zLCBub3QgbmVjZXNzYXJ5LCBlaXRoZXIsIGJ1dCBpdCBpcyBuaWNlciB0byBoYXZlIHRoZSBJbmNpZGVudF9OdW1iZXJcbiMgSW5jaWRlbnRfRGF0ZV9UaW1lIGFzIHRoZSBmaXJzdCAyIGNvbHVtbnNcbnBvbGljZV9jYWxsc19tZXJnZSA8LSBwb2xpY2VfY2FsbHNfbWVyZ2VbLCBjKDIsMywxLDQsNTo5KV1cbm1lcmdlX3RpbWUgPC0gU3lzLnRpbWUoKSAtIHN0YXJ0XG5jYXQoXCJJdCB0b29rXCIsIGFzLm51bWVyaWMobWVyZ2VfdGltZSwgdW5pdHMgPSBcInNlY3NcIiksIFwic2Vjb25kcyB0byBtZXJnZSB0aGUgMiBkYXRhZnJhbWVzLlwiKVxuYGBgIn0= -->
 <pre class="r"><code>start &lt;- Sys.time()
 # This is doing a LEFT JOIN
 # https://www.w3schools.com/sql/sql_join_left.asp
@@ -757,7 +757,9 @@ police_calls_merge &lt;- within(police_calls_merge, longitude &lt;- ifelse(!is.n
 # Removing latitude.x, latitude.y, longitude.x, longitude.y
 # https://stackoverflow.com/questions/4605206/drop-data-frame-columns-by-name
 police_calls_merge &lt;- within(police_calls_merge, rm(latitude.x, latitude.y, longitude.x, longitude.y))
-# Ordering by incident number. I don't think you really need to do this
+# Ordering by incident number. I don't think you really need to do this, but it looks
+# nicer to have the dataframe ordered by the incident number
+# https://stackoverflow.com/questions/1296646/how-to-sort-a-dataframe-by-columns
 police_calls_merge &lt;- police_calls_merge[with(police_calls_merge, order(Incident_Number)), ]
 # Reordering columns, not necessary, either, but it is nicer to have the Incident_Number
 # Incident_Date_Time as the first 2 columns
@@ -765,8 +767,8 @@ police_calls_merge &lt;- police_calls_merge[, c(2,3,1,4,5:9)]
 merge_time &lt;- Sys.time() - start
 cat(&quot;It took&quot;, as.numeric(merge_time, units = &quot;secs&quot;), &quot;seconds to merge the 2 dataframes.&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayAyNTcuOTgwNSBzZWNvbmRzIHRvIG1lcmdlIHRoZSAyIGRhdGFmcmFtZXMuXG4ifQ== -->
-<pre><code>It took 257.9805 seconds to merge the 2 dataframes.</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayAyMTguNDU4OCBzZWNvbmRzIHRvIG1lcmdlIHRoZSAyIGRhdGFmcmFtZXMuXG4ifQ== -->
+<pre><code>It took 218.4588 seconds to merge the 2 dataframes.</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -802,8 +804,8 @@ for(year in c(2009:2015)) {
 split_files_time &lt;- Sys.time() - start
 cat(&quot;It took&quot;, as.numeric(split_files_time, units = &quot;secs&quot;), &quot;seconds to split into yearly files.&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayA1MC4xMTUzOSBzZWNvbmRzIHRvIHNwbGl0IGludG8geWVhcmx5IGZpbGVzLlxuIn0= -->
-<pre><code>It took 50.11539 seconds to split into yearly files.</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayA0NS40OTIzNyBzZWNvbmRzIHRvIHNwbGl0IGludG8geWVhcmx5IGZpbGVzLlxuIn0= -->
+<pre><code>It took 45.49237 seconds to split into yearly files.</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
@@ -811,12 +813,12 @@ cat(&quot;It took&quot;, as.numeric(split_files_time, units = &quot;secs&quot;),
 <p>Wrapping up, compute the time it took to run this munging notebook.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudG90YWxfdGltZSA8LSAocmVhZF90aW1lICsgcmVuYW1lX3RpbWUgKyB3ZWVrZGF5c190aW1lICsgaG91cnNfdGltZSArIHBlcmlvZHNfdGltZSArIGNhdGVnb3JpZXNfdGltZSArIGxhdGxvbmdfdGltZSArIG1lcmdlX3RpbWUgKyBzcGxpdF9maWxlc190aW1lKVxuY2F0KFwiSXQgdG9vayBhcHByb3hpbWF0ZWx5XCIsIGFzLm51bWVyaWModG90YWxfdGltZSwgdW5pdHMgPSBcInNlY3NcIikgLyA2MCAsXCJtaW51dGVzIHRvIHJ1biB0aGlzIG11bmdpbmcgbm90ZWJvb2suXCIpXG5gYGAifQ== -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxudG90YWxfdGltZSA8LSAocmVhZF90aW1lICsgcmVuYW1lX3RpbWUgKyB3ZWVrZGF5c190aW1lICsgaG91cnNfdGltZSArIHBlcmlvZHNfdGltZSArIGNhdGVnb3JpZXNfdGltZSArIGxhdGxvbmdfdGltZSArIG1lcmdlX3RpbWUgKyBzcGxpdF9maWxlc190aW1lKVxuY2F0KFwiSXQgdG9vayBhcHByb3hpbWF0ZWx5XCIsIGFzLm51bWVyaWModG90YWxfdGltZSwgdW5pdHMgPSBcInNlY3NcIikgLyA2MCAsXCJtaW51dGVzIHRvIHJ1biB0aGlzIG5vdGVib29rLlwiKVxuYGBgIn0= -->
 <pre class="r"><code>total_time &lt;- (read_time + rename_time + weekdays_time + hours_time + periods_time + categories_time + latlong_time + merge_time + split_files_time)
-cat(&quot;It took approximately&quot;, as.numeric(total_time, units = &quot;secs&quot;) / 60 ,&quot;minutes to run this munging notebook.&quot;)</code></pre>
+cat(&quot;It took approximately&quot;, as.numeric(total_time, units = &quot;secs&quot;) / 60 ,&quot;minutes to run this notebook.&quot;)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayBhcHByb3hpbWF0ZWx5IDExLjI3NTI5IG1pbnV0ZXMgdG8gcnVuIHRoaXMgbXVuZ2luZyBub3RlYm9vay5cbiJ9 -->
-<pre><code>It took approximately 11.27529 minutes to run this munging notebook.</code></pre>
+<!-- rnb-output-begin eyJkYXRhIjoiSXQgdG9vayBhcHByb3hpbWF0ZWx5IDcuOTczNTI2IG1pbnV0ZXMgdG8gcnVuIHRoaXMgbm90ZWJvb2suXG4ifQ== -->
+<pre><code>It took approximately 7.973526 minutes to run this notebook.</code></pre>
 <!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
